@@ -1,0 +1,884 @@
+/* ============================================
+   COST SHEET CREATE - CLEAN WHITE THEME
+   Primary Color: #102a54 (Dark Blue)
+   ============================================ */
+
+/* Page Container */
+.cs-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.cs-page-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cs-page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #102a54;
+  margin: 0 0 24px 0;
+}
+
+/* Section Cards */
+.cs-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(16, 42, 84, 0.05);
+}
+
+.cs-card-header {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cs-card-open .cs-card-header {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cs-card-closed .cs-card-header {
+  border-bottom: none;
+}
+
+.cs-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #102a54;
+  margin: 0;
+}
+
+.cs-chevron {
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid #102a54;
+  border-bottom: 2px solid #102a54;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.cs-chevron-open {
+  transform: rotate(-135deg);
+}
+
+.cs-card-body {
+  padding: 20px;
+}
+
+/* Form Elements */
+.cs-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.cs-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cs-field--full {
+  grid-column: 1 / -1;
+}
+
+.cs-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.cs-hint {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 400;
+  display: block;
+  margin-top: 2px;
+}
+
+.cs-input,
+.cs-select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #ffffff;
+  color: #111827;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cs-input:focus,
+.cs-select:focus {
+  outline: none;
+  border-color: #102a54;
+  box-shadow: 0 0 0 3px rgba(16, 42, 84, 0.1);
+}
+
+.cs-input:disabled,
+.cs-select:disabled {
+  background: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.cs-input--currency {
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+/* Radio Buttons */
+.cs-radio-group {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.cs-radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+}
+
+.cs-radio input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #102a54;
+}
+
+/* Checkbox */
+.cs-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+}
+
+.cs-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #102a54;
+}
+
+/* Tables */
+.cs-table {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+}
+
+.cs-table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+  background: #f9fafb;
+  border-radius: 6px;
+}
+
+.cs-table-row--5 {
+  grid-template-columns: 2fr 1fr 1.5fr 1.5fr 60px;
+}
+
+.cs-table-header {
+  background: #102a54;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.cs-table-cell-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cs-icon-button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #ef4444;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cs-icon-button:hover {
+  background: #dc2626;
+}
+
+/* Buttons */
+.cs-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cs-button-primary {
+  background: #102a54;
+  color: #ffffff;
+}
+
+.cs-button-primary:hover {
+  background: #0d1f3f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 42, 84, 0.3);
+}
+
+.cs-button-primary:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cs-button-secondary {
+  background: #ffffff;
+  color: #102a54;
+  border: 2px solid #102a54;
+}
+
+.cs-button-secondary:hover {
+  background: #f9fafb;
+}
+
+.cs-button-outline {
+  background: #ffffff;
+  color: #102a54;
+  border: 1px solid #d1d5db;
+}
+
+.cs-button-outline:hover {
+  background: #f9fafb;
+  border-color: #102a54;
+}
+
+.cs-button-light {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.cs-button-light:hover {
+  background: #e5e7eb;
+}
+
+/* Payment Plan Total */
+.cs-total-percentage {
+  font-size: 14px;
+  font-weight: 600;
+  color: #dc2626;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #fee2e2;
+  border-radius: 6px;
+}
+
+/* ============ COST BREAKDOWN STYLES ============ */
+
+.cs-cost-section {
+  margin-bottom: 24px;
+}
+
+.cs-cost-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #102a54;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.cs-cost-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cs-cost-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.cs-cost-line span:first-child {
+  color: #374151;
+  font-weight: 500;
+}
+
+.cs-cost-amount {
+  font-weight: 600;
+  color: #111827;
+  font-variant-numeric: tabular-nums;
+}
+
+.cs-cost-subtotal {
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  margin-top: 4px;
+}
+
+.cs-cost-subtotal span:first-child {
+  color: #102a54;
+  font-weight: 600;
+}
+
+.cs-cost-subtotal .cs-cost-amount {
+  color: #102a54;
+  font-size: 15px;
+}
+
+/* Possession Section - Clean White */
+.cs-possession-section {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 2px solid #102a54;
+}
+
+.cs-possession-section .cs-cost-section-title {
+  color: #102a54;
+  border-bottom-color: #102a54;
+}
+
+.cs-possession-section .cs-cost-line {
+  background-color: #f8f9fa;
+  border-color: #d1d5db;
+}
+
+.cs-possession-section .cs-cost-subtotal {
+  background-color: #e8eef5;
+  border-color: #102a54;
+}
+
+.cs-possession-section .cs-cost-subtotal span:first-child {
+  color: #102a54;
+}
+
+.cs-possession-section .cs-cost-subtotal .cs-cost-amount {
+  color: #102a54;
+}
+
+/* Summary */
+.cs-cost-summary {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+}
+
+.cs-cost-summary-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.cs-cost-summary-line .cs-cost-amount {
+  color: #111827;
+  font-weight: 600;
+}
+
+.cs-cost-summary-line:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Grand Total - Dark Blue Theme */
+.cs-cost-final {
+  margin-top: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #102a54, #1a3d6f);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(16, 42, 84, 0.25);
+}
+
+.cs-cost-final span:first-child {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cs-cost-final .cs-cost-amount {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Parking Section */
+.cs-parking-section {
+  margin: 16px 0;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.cs-parking-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cs-parking-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cs-parking-count {
+  width: 100px;
+}
+
+.cs-parking-price {
+  width: 180px;
+}
+
+/* Terms & Conditions Preview */
+.cs-tnc-preview {
+  padding: 16px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.cs-tnc-preview-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #102a54;
+  margin-bottom: 12px;
+}
+
+.cs-tnc-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.cs-tnc-list li {
+  margin-bottom: 8px;
+}
+
+.cs-tnc-empty {
+  color: #9ca3af;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Attachments */
+.cs-attachments-dropzone {
+  padding: 32px;
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #f9fafb;
+}
+
+.cs-attachments-dropzone:hover {
+  border-color: #102a54;
+  background: #ffffff;
+}
+
+.cs-attachments-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.cs-attachments-text {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.cs-attachments-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+}
+
+.cs-attachments-list li {
+  padding: 8px 12px;
+  background: #f3f4f6;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.cs-attachments-checkbox {
+  margin-top: 12px;
+}
+
+/* Actions */
+.cs-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 2px solid #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cs-page {
+    padding: 16px;
+  }
+
+  .cs-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-table-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .cs-table-row--5 {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-parking-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cs-parking-controls {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .cs-parking-count,
+  .cs-parking-price {
+    width: 100%;
+  }
+
+  .cs-actions {
+    flex-direction: column;
+  }
+
+  .cs-button {
+    width: 100%;
+  }
+
+  .cs-cost-final {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+/* ========================================================================
+   COST BREAKDOWN STYLES - CLEAN WHITE THEME
+   Primary Color: #102a54 (Dark Blue)
+   ======================================================================== */
+
+/* Cost Breakdown Section Container */
+.cost-breakdown-section {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Section Headers */
+.cost-breakdown-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: #102a54;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+/* Line-by-line rows */
+.cost-breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 14px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.cost-breakdown-row:last-child {
+  margin-bottom: 0;
+}
+
+.cost-breakdown-row span:first-child {
+  flex: 1;
+  color: #374151;
+  font-weight: 500;
+}
+
+.cost-breakdown-row span:last-child {
+  font-weight: 600;
+  color: #111827;
+  text-align: right;
+  min-width: 150px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ================== SECTION STYLES ================== */
+
+/* Unit Cost Section - Clean White with Blue Accent */
+.cost-breakdown-unit {
+  background-color: #ffffff;
+  border: 2px solid #102a54;
+}
+
+.cost-breakdown-unit .cost-breakdown-header {
+  color: #102a54;
+  border-bottom-color: #102a54;
+}
+
+.cost-breakdown-unit .cost-breakdown-row {
+  background-color: #f8f9fa;
+  border-color: #d1d5db;
+}
+
+/* Possession Section - Clean White with Blue Accent */
+.cost-breakdown-possession {
+  background-color: #ffffff;
+  border: 2px solid #102a54;
+}
+
+.cost-breakdown-possession .cost-breakdown-header {
+  color: #102a54;
+  border-bottom-color: #102a54;
+}
+
+.cost-breakdown-possession .cost-breakdown-row {
+  background-color: #f8f9fa;
+  border-color: #d1d5db;
+}
+
+/* Summary Section - Light Gray Background */
+.cost-breakdown-summary {
+  background-color: #f8f9fa;
+  border: 1px solid #d1d5db;
+}
+
+.cost-breakdown-summary .cost-breakdown-row {
+  background-color: #ffffff;
+  border-color: #e5e7eb;
+}
+
+/* ================== TOTAL ROWS ================== */
+
+/* Total Row (in Unit Cost) - Blue highlight */
+.cost-breakdown-total {
+  background-color: #e8eef5 !important;
+  border: 1px solid #102a54 !important;
+  font-weight: 600 !important;
+  margin-top: 8px;
+  font-size: 15px !important;
+}
+
+.cost-breakdown-total span:first-child {
+  color: #102a54 !important;
+  font-weight: 600 !important;
+}
+
+.cost-breakdown-total span:last-child {
+  color: #102a54 !important;
+  font-weight: 700 !important;
+}
+
+/* Subtotal Row (in Possession) - Blue highlight */
+.cost-breakdown-subtotal {
+  background-color: #e8eef5 !important;
+  border: 1px solid #102a54 !important;
+  font-weight: 600 !important;
+  margin-top: 8px;
+  font-size: 15px !important;
+}
+
+.cost-breakdown-subtotal span:first-child {
+  color: #102a54 !important;
+  font-weight: 600 !important;
+}
+
+.cost-breakdown-subtotal span:last-child {
+  color: #102a54 !important;
+  font-weight: 700 !important;
+}
+
+/* ================== GRAND TOTAL BANNER ================== */
+
+/* Grand Total - Dark Blue Banner */
+.cost-breakdown-grand-total {
+  background: linear-gradient(135deg, #102a54 0%, #1a3d6f 100%);
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 20px;
+  box-shadow: 0 10px 25px rgba(16, 42, 84, 0.25);
+}
+
+.cost-breakdown-grand-total span:first-child {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.cost-breakdown-grand-total span:last-child {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* ================== RESPONSIVE ================== */
+
+@media (max-width: 768px) {
+  .cost-breakdown-section {
+    padding: 12px;
+  }
+
+  .cost-breakdown-grand-total {
+    font-size: 14px;
+    padding: 16px 12px;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .cost-breakdown-grand-total span:last-child {
+    font-size: 18px;
+  }
+  
+  .cost-breakdown-row {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+  
+  .cost-breakdown-row span:last-child {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cost-breakdown-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  
+  .cost-breakdown-row span:last-child {
+    text-align: left;
+    min-width: auto;
+    font-size: 15px;
+  }
+
+  .cost-breakdown-header {
+    font-size: 13px;
+  }
+}
+
+/* ================== PRINT STYLES ================== */
+
+@media print {
+  .cost-breakdown-section {
+    page-break-inside: avoid;
+    border-color: #102a54 !important;
+  }
+  
+  .cost-breakdown-grand-total {
+    background: #102a54 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cost-breakdown-row {
+    border-color: #e5e7eb !important;
+  }
+}
+
+/* ================== HOVER EFFECTS ================== */
+
+.cost-breakdown-row:hover {
+  background-color: #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+.cost-breakdown-total:hover,
+.cost-breakdown-subtotal:hover {
+  background-color: #d6e0f0 !important;
+}
+
+/* ================== ADDITIONAL UTILITIES ================== */
+
+/* Parking line special styling */
+.cost-breakdown-row.parking-line {
+  background-color: #f0f9ff;
+  border-color: #bae6fd;
+}
+
+.cost-breakdown-row.parking-line span:first-child {
+  color: #0369a1;
+}
+
+/* GST line special styling */
+.cost-breakdown-row.gst-line span:first-child {
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* Empty state */
+.cost-breakdown-empty {
+  padding: 24px;
+  text-align: center;
+  color: #9ca3af;
+  font-style: italic;
+  font-size: 14px;
+}

@@ -1,0 +1,691 @@
+/* ============================================
+   QUOTATION PREVIEW - CLEAN WHITE THEME
+   Primary Color: #102a54 (Dark Blue)
+   ============================================ */
+
+/* Page background */
+.qp-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 32px 24px;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+}
+
+/* Outer card */
+.qp-inner {
+  max-width: 95%;
+  margin: 0 auto 40px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 24px 28px 32px;
+  box-shadow: 0 2px 8px rgba(16, 42, 84, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.qp-inner-loading {
+  text-align: center;
+  font-size: 14px;
+  padding: 40px 0;
+  color: #6b7280;
+}
+
+/* Sections */
+.qp-section {
+  margin-bottom: 28px;
+}
+
+.qp-section-header {
+  margin-bottom: 24px;
+}
+
+/* Hide print-only elements in screen view */
+.qp-print-only {
+  display: none !important;
+}
+
+/* Titles / headings */
+.qp-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #102a54;
+  margin: 0 0 12px;
+}
+
+.qp-section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #102a54;
+  margin: 0 0 10px;
+}
+
+/* Header meta row */
+.qp-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.qp-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.qp-meta-line {
+  font-size: 13px;
+  color: #374151;
+}
+
+.qp-meta-label {
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.qp-meta-value {
+  font-weight: 400;
+  color: #111827;
+}
+
+.qp-header-right {
+  font-size: 13px;
+  color: #374151;
+  white-space: nowrap;
+}
+
+/* Cards / panels */
+.qp-panel {
+  background-color: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 16px 20px;
+  box-shadow: 0 1px 2px rgba(16, 42, 84, 0.04);
+}
+
+.qp-panel-soft {
+  background-color: #f8f9fa;
+  border-color: #d1d5db;
+}
+
+/* Customer block */
+.qp-cust-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.qp-cust-address {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.qp-cust-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.qp-cust-col {
+  min-width: 220px;
+}
+
+.qp-cust-col-right {
+  text-align: left;
+}
+
+.qp-label-value {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.qp-label {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.qp-value {
+  color: #111827;
+}
+
+/* Tables */
+.qp-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13px;
+}
+
+.qp-table thead tr {
+  background-color: #102a54;
+}
+
+.qp-table thead th {
+  padding: 10px 14px;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 1px solid #102a54;
+}
+
+.qp-table tbody td {
+  padding: 10px 14px;
+  color: #111827;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.qp-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.qp-align-right {
+  text-align: right;
+}
+
+/* Header top row with download button */
+.qp-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+/* Download PDF button */
+.qp-download-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #102a54;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(16, 42, 84, 0.25);
+  transition: all 0.2s;
+}
+
+.qp-download-btn:hover {
+  background: #0d1f3f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 42, 84, 0.3);
+}
+
+.qp-plan-meta {
+  font-size: 13px;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+/* ============ COST BREAKDOWN STYLES ============ */
+
+.qp-cost-section {
+  margin-bottom: 24px;
+}
+
+.qp-cost-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #102a54;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.qp-cost-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.qp-cost-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.qp-cost-line span:first-child {
+  color: #374151;
+  font-weight: 500;
+}
+
+.qp-cost-amount {
+  font-weight: 600;
+  color: #111827;
+  font-variant-numeric: tabular-nums;
+}
+
+.qp-cost-subtotal {
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  margin-top: 4px;
+}
+
+.qp-cost-subtotal span:first-child {
+  color: #102a54;
+  font-weight: 600;
+}
+
+.qp-cost-subtotal .qp-cost-amount {
+  color: #102a54;
+  font-size: 15px;
+}
+
+/* Possession Section - Clean White with Blue Border */
+.qp-possession-section {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 2px solid #102a54;
+}
+
+.qp-possession-section .qp-cost-section-title {
+  color: #102a54;
+  border-bottom-color: #102a54;
+}
+
+.qp-possession-section .qp-cost-line {
+  background-color: #f8f9fa;
+  border-color: #d1d5db;
+}
+
+.qp-possession-section .qp-cost-subtotal {
+  background-color: #e8eef5;
+  border-color: #102a54;
+}
+
+.qp-possession-section .qp-cost-subtotal span:first-child {
+  color: #102a54;
+}
+
+.qp-possession-section .qp-cost-subtotal .qp-cost-amount {
+  color: #102a54;
+}
+
+/* Summary before Grand Total */
+.qp-cost-summary {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+}
+
+.qp-cost-summary-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.qp-cost-summary-line .qp-cost-amount {
+  color: #111827;
+  font-weight: 600;
+}
+
+.qp-cost-summary-line:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.qp-cost-final {
+  background: #ffffff;
+  border: 2px solid #102a54;  /* 🔹 same border color as qp-cost-subtotal */
+  padding: 18px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #102a54;
+  margin-top: 20px;
+  box-shadow: none;
+}
+
+
+
+
+/* Left label */
+.qp-cost-final span:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  color: #102a54;
+  text-transform: none;                /* remove UPPERCASE */
+  letter-spacing: 0;                   /* reset spacing */
+}
+
+/* Right value (amount) */
+.qp-cost-final .qp-cost-amount {
+  font-size: 20px;
+  font-weight: 700;
+  color: #102a54;
+  min-width: 80px;
+  text-align: right;
+}
+
+/* Unit Number Header (print only) – keep as-is */
+.qp-unit-print-header {
+  margin-bottom: 20px;
+}
+
+.qp-unit-number {
+  font-size: 18px;
+  font-weight: 700;
+  color: #102a54;
+  padding: 12px 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 2px solid #102a54;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .qp-page {
+    padding: 20px 12px;
+  }
+
+  .qp-inner {
+    padding: 20px 16px 24px;
+  }
+
+  .qp-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .qp-header-right {
+    white-space: normal;
+  }
+
+  .qp-cust-grid {
+    flex-direction: column;
+  }
+
+  .qp-cost-line {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .qp-cost-final {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  .qp-cost-final .qp-cost-amount {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .qp-cost-final {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    text-align: left;
+  }
+
+  .qp-cost-final .qp-cost-amount {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+  }
+}
+
+
+@media print {
+  /* ✅ Root reset */
+  html,
+  body,
+  #root {
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
+
+  * {
+    overflow: visible !important;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ✅ Page setup - single page */
+  @page {
+    margin: 10mm;
+    size: A4;
+  }
+
+  /* ✅ Page container - COMPACT */
+  .qp-page {
+    background: #ffffff !important;
+    padding: 0 !important;
+    min-height: auto !important;
+  }
+
+  .qp-inner {
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  /* ✅ HIDE: Everything except unit number and cost breakdown */
+  .qp-section-header,
+  .qp-download-btn,
+  .qp-print-hide,
+  nav,
+  footer,
+  header,
+  .navbar,
+  .footer,
+  .qp-header-top,
+  .qp-header-row,
+  .qp-cust-name,
+  .qp-cust-address,
+  .qp-cust-grid,
+  .qp-panel-soft,
+  .qp-table,
+  .qp-plan-meta {
+    display: none !important;
+  }
+
+  /* ✅ SHOW: Unit number and cost breakdown only */
+  .qp-print-only {
+    display: block !important;
+  }
+
+  /* ✅ Sections - COMPACT spacing */
+  .qp-section {
+    margin-bottom: 8px !important;
+    page-break-inside: avoid;
+  }
+
+  /* ✅ Unit Number Header - COMPACT */
+  .qp-unit-print-header {
+    margin-bottom: 10px !important;
+    page-break-inside: avoid;
+  }
+
+  .qp-unit-number {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    padding: 6px 10px !important;
+    background-color: #ffffff !important;
+    border: 1.5px solid #ffffff !important;
+    border-radius: 4px !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ✅ Section titles - COMPACT */
+  .qp-section-title {
+    font-size: 12px !important;
+    margin-bottom: 6px !important;
+    color: #102a54 !important;
+    font-weight: 600 !important;
+  }
+
+  /* ✅ Cost sections - COMPACT */
+  .qp-cost-section {
+    margin-bottom: 8px !important;
+    page-break-inside: avoid;
+  }
+
+  .qp-cost-section-title {
+    font-size: 11px !important;
+    margin: 0 0 6px 0 !important;
+    padding-bottom: 4px !important;
+    border-bottom: 1.5px solid #e5e7eb !important;
+  }
+
+  .qp-cost-breakdown {
+    gap: 4px !important;
+  }
+
+  /* ✅ Cost lines - COMPACT */
+  .qp-cost-line {
+    padding: 6px 10px !important;
+    font-size: 11px !important;
+    border-radius: 4px !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  .qp-cost-line span:first-child {
+    font-size: 11px !important;
+  }
+
+  .qp-cost-amount {
+    font-size: 11px !important;
+  }
+
+  /* ✅ Subtotals - COMPACT */
+  .qp-cost-subtotal {
+    background-color: #f0f9ff !important;
+    border: 1px solid #bae6fd !important;
+    margin-top: 2px !important;
+    padding: 7px 10px !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .qp-cost-subtotal span:first-child {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+  }
+
+  .qp-cost-subtotal .qp-cost-amount {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+  }
+
+  /* ✅ Possession Section - COMPACT */
+  .qp-possession-section {
+    background-color: #ffffff !important;
+    border: 1.5px solid #102a54 !important;
+    padding: 8px !important;
+    border-radius: 6px !important;
+    margin-bottom: 8px !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .qp-possession-section .qp-cost-section-title {
+    color: #102a54 !important;
+    border-bottom: 1.5px solid #102a54 !important;
+  }
+
+  .qp-possession-section .qp-cost-line {
+    background-color: #f8f9fa !important;
+    border-color: #d1d5db !important;
+  }
+
+  .qp-possession-section .qp-cost-subtotal {
+    background-color: #e8eef5 !important;
+    border-color: #102a54 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ✅ Summary - COMPACT */
+  .qp-cost-summary {
+    background-color: #f8f9fa !important;
+    padding: 8px !important;
+    border-radius: 6px !important;
+    border: 1px solid #d1d5db !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .qp-cost-summary-line {
+    padding: 4px 0 !important;
+    font-size: 11px !important;
+  }
+
+  .qp-cost-summary-line .qp-cost-amount {
+    font-size: 11px !important;
+  }
+
+  /* ✅ Grand Total - COMPACT but prominent */
+  .qp-cost-final {
+  background: #ffffff;
+  border: 1px solid #102a54;  /* 🔹 same border color as qp-cost-subtotal */
+  padding: 18px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #102a54;
+  margin-top: 20px;
+  box-shadow: none;
+  }
+
+  .qp-cost-final span:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  color: #102a54;
+  text-transform: none;                /* remove UPPERCASE */
+  letter-spacing: 0;      
+  }
+
+  .qp-cost-final .qp-cost-amount {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+  color: #102a54;
+  }
+
+  /* ✅ Force single page */
+  .qp-section,
+  .qp-cost-section,
+  .qp-cost-final {
+    page-break-inside: avoid !important;
+    page-break-after: auto !important;
+  }
+
+  /* Remove extra margins */
+  h2, h3 {
+    margin-top: 0 !important;
+  }
+}
