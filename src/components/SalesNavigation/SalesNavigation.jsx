@@ -925,7 +925,7 @@ export default function SalesNavigation() {
         { id: "inventory", label: "Inventory", route: "/inventory-planning/", section: "pre-sales" },
         { id: "quotation", label: "Quotation", route: "/costsheet", section: "pre-sales" },
         { id: "booking", label: "Booking", route: "/booking/list", section: "pre-sales" },
-        { id: "Documents", label: "Documents", route: "/documents", section: "pre-sales" },
+       // { id: "Documents", label: "Documents", route: "/documents", section: "pre-sales" },
         { id: "on-site", label: "Customer Registration Form ", route: "/onsite-registration", section: "pre-sales" },
         { id: "channel-partner", label: "Channel-Partner", route: "/channel-partners", section: "pre-sales" },
       ];
