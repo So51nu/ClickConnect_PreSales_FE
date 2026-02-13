@@ -245,7 +245,7 @@ export default function LeadsList() {
       "Investment", // purpose
       "New Lead", // stage (LeadStage.name)
       "cp1@example.com", // cp_email (role = CHANNEL_PARTNER)
-      "vasisayed09421@gmail.com",
+      "sonuyadav2192004@gmail.com",
     ];
 
     const csvContent = `${header.join(",")}\n${sampleRow.join(",")}`;

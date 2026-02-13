@@ -881,8 +881,8 @@ export default function SalesNavigation() {
   const [activeTab, setActiveTab] = useState("");
 
   const sections = [
-    { id: "pre-sales", label: "Pre Sales", route: "/dashboard" },
-    { id: "post-sales", label: "Post Sales", route: "/post-sales" },
+    // { id: "pre-sales", label: "Pre Sales", route: "/dashboard" },
+    // { id: "post-sales", label: "Post Sales", route: "/post-sales" },
   ];
 
   const getNavigationItems = () => {

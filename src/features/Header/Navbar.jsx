@@ -69,7 +69,7 @@ const ProfileIcon = ({ className = "", size = 20 }) => (
 function Navbar({ currentUser, onLogout, showLogout = true }) {
   const { brand } = useAuth() || {};
 
-  const DEFAULT_BRAND_NAME = "myciti.life";
+  const DEFAULT_BRAND_NAME = "Sanskriti";
   const DEFAULT_PRIMARY_COLOR = "#102a54";
   const DEFAULT_FONT_FAMILY =
     "'Inter', 'Segoe UI', 'Roboto', 'Open Sans', sans-serif";

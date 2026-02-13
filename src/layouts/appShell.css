@@ -1,0 +1,20 @@
+/* App shell (global layout) */
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell__nav {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.app-shell__main {
+  flex: 1;
+  padding: 8px 0 22px;
+}
+
+

@@ -124,7 +124,7 @@ export default function ForgotPassword() {
 
   // branding (simple – same logo/title)
   const brandLogo = profileImg;
-  const brandName = "myciti.life";
+  const brandName = "Sanskriti";
 
   const handleChange = (e) => {
     setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
