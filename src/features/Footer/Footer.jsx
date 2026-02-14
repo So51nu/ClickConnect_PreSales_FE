@@ -29,7 +29,7 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-left">
           <p className="footer-text" style={{ fontFamily: fontFamilyStr, color: theme.secondary_color }}>
-            © 2026 CLICK CONNeCT MEDIA All rights reserved.
+            © 2026 CLICK CONNECT MEDIA All rights reserved.
           </p>
         </div>
 
