@@ -4783,7 +4783,7 @@ export default function OnsiteRegistration() {
 
             <p style={{ fontSize: 14, color: "#6b7280", marginBottom: 6 }}>Warm Regards,</p>
             <p style={{ fontSize: 14, color: "#374151", fontWeight: 600 }}>
-              Team Sanskriti Developer
+              Team Click Connect Media Developer
             </p>
 
             <div className="modal-actions" style={{ justifyContent: "center" }}>

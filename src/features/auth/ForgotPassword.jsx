@@ -124,7 +124,7 @@ export default function ForgotPassword() {
 
   // branding (simple – same logo/title)
   const brandLogo = profileImg;
-  const brandName = "Sanskriti";
+  const brandName = "Click Connect Media";
 
   const handleChange = (e) => {
     setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
