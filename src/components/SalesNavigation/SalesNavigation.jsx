@@ -889,7 +889,8 @@ export default function SalesNavigation() {
     const userRole = user?.role || "SALES";
 
     // 1. Logic for ADMIN and FULL_CONTROL
-    if (userRole === "ADMIN" || userRole === "FULL_CONTROL") {
+    // if (userRole === "ADMIN" || userRole === "FULL_CONTROL") {
+     if (userRole === "ADMIN") {
       const adminItems = [
         { id: "dashboard", label: "Dashboard", route: "/dashboard", section: "pre-sales" },
         { id: "master-setup", label: "Master Setup", route: "/setup", section: "pre-sales" },
@@ -963,24 +964,24 @@ export default function SalesNavigation() {
 }
 
 
-    // 3. Logic for RECEPTION
-    if (userRole === "RECEPTION") {
-      return [
-        { id: "dashboard", label: "Dashboard", route: "/dashboard", section: "pre-sales" },
-        { id: "leads", label: "Leads", route: "/leads", section: "pre-sales" },
-        { id: "profile", label: "Profile", route: "/profile", section: "pre-sales" },
-      ];
-    }
+    // // 3. Logic for RECEPTION
+    // if (userRole === "RECEPTION") {
+    //   return [
+    //     { id: "dashboard", label: "Dashboard", route: "/dashboard", section: "pre-sales" },
+    //     { id: "leads", label: "Leads", route: "/leads", section: "pre-sales" },
+    //     { id: "profile", label: "Profile", route: "/profile", section: "pre-sales" },
+    //   ];
+    // }
 
-    // 4. Logic for CHANNEL_PARTNER
-    if (userRole === "CHANNEL_PARTNER") {
-      return [
-        { id: "dashboard", label: "Dashboard", route: "/dashboard", section: "pre-sales" },
-        { id: "leads", label: "Leads", route: "/leads", section: "pre-sales" },
-        { id: "profile", label: "Profile", route: "/profile", section: "pre-sales" },
-        { id: "channel-partner", label: "Channel Partner Setup", route: "/channel-partner-setup", section: "pre-sales" },
-      ];
-    }
+    // // 4. Logic for CHANNEL_PARTNER
+    // if (userRole === "CHANNEL_PARTNER") {
+    //   return [
+    //     { id: "dashboard", label: "Dashboard", route: "/dashboard", section: "pre-sales" },
+    //     { id: "leads", label: "Leads", route: "/leads", section: "pre-sales" },
+    //     { id: "profile", label: "Profile", route: "/profile", section: "pre-sales" },
+    //     { id: "channel-partner", label: "Channel Partner Setup", route: "/channel-partner-setup", section: "pre-sales" },
+    //   ];
+    // }
 
     // Default Fallback
     return [
