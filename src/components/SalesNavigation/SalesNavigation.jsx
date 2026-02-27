@@ -982,12 +982,12 @@ export default function SalesNavigation() {
     //     { id: "channel-partner", label: "Channel Partner Setup", route: "/channel-partner-setup", section: "pre-sales" },
     //   ];
     // }
-
-    // Default Fallback
-    return [
-      { id: "dashboard", label: "Dashboard", route: "/dashboard", section: "pre-sales" },
-      { id: "profile", label: "Profile", route: "/profile", section: "pre-sales" },
-    ];
+  // 3. Logic for CHANNEL_PARTNER and RECEPTION (No Navigation)
+    if (userRole === "CHANNEL_PARTNER" || userRole === "RECEPTION") {
+      return [];
+    }
+        // Default Fallback
+    return [];
   };
 
   const navigationItems = useMemo(() => getNavigationItems(), [user?.role]);
